@@ -33,8 +33,6 @@ is tagged correctly.
   * [`debian`](https://github.com/pterodactyl/yolks/tree/master/oses/debian)
     * `ghcr.io/pterodactyl/yolks:debian`
 * [`games`](https://github.com/pterodactyl/yolks/tree/master/games)
-  * [`fivem`](https://github.com/pterodactyl/yolks/tree/master/games/fivem)
-    * `ghcr.io/pterodactyl/games:fivem`
   * [`rust`](https://github.com/pterodactyl/yolks/tree/master/games/rust)
     * `ghcr.io/pterodactyl/games:rust`
   * [`source`](https://github.com/pterodactyl/yolks/tree/master/games/source)
@@ -46,6 +44,8 @@ is tagged correctly.
     * `ghcr.io/pterodactyl/yolks:go_1.15`
   * [`go1.16`](https://github.com/pterodactyl/yolks/tree/master/go/1.16)
     * `ghcr.io/pterodactyl/yolks:go_1.16`
+  * [`go1.17`](https://github.com/pterodactyl/yolks/tree/master/go/1.17)
+    * `ghcr.io/pterodactyl/yolks:go_1.17`
 * [`java`](https://github.com/pterodactyl/yolks/tree/master/java)
   * [`java8`](https://github.com/pterodactyl/yolks/tree/master/java/8)
     * `ghcr.io/pterodactyl/yolks:java_8`
@@ -60,7 +60,7 @@ is tagged correctly.
   * [`java16 - OpenJ9`](https://github.com/pterodactyl/yolks/tree/master/java/16j9)
     * `ghcr.io/pterodactyl/yolks:java_16j9`
   * [`java17`](https://github.com/pterodactyl/yolks/tree/master/java/17)
-    * `ghcr.io/pterodactyl/yolks:java_17`    
+    * `ghcr.io/pterodactyl/yolks:java_17`
 * [`nodejs`](https://github.com/pterodactyl/yolks/tree/master/nodejs)
   * [`node12`](https://github.com/pterodactyl/yolks/tree/master/nodejs/12)
     * `ghcr.io/pterodactyl/yolks:nodejs_12`
@@ -70,6 +70,8 @@ is tagged correctly.
     * `ghcr.io/pterodactyl/yolks:nodejs_15`
   * [`node16`](https://github.com/pterodactyl/yolks/tree/master/nodejs/16)
     * `ghcr.io/pterodactyl/yolks:nodejs_16`
+  * [`node17`](https://github.com/pterodactyl/yolks/tree/master/nodejs/17)
+    * `ghcr.io/pterodactyl/yolks:nodejs_17`
 * [`python`](https://github.com/pterodactyl/yolks/tree/master/python)
   * [`python3.7`](https://github.com/pterodactyl/yolks/tree/master/python/3.7)
     * `ghcr.io/pterodactyl/yolks:python_3.7`
@@ -77,6 +79,8 @@ is tagged correctly.
     * `ghcr.io/pterodactyl/yolks:python_3.8`
   * [`python3.9`](https://github.com/pterodactyl/yolks/tree/master/python/3.9)
     * `ghcr.io/pterodactyl/yolks:python_3.9`
+  * [`python3.10`](https://github.com/pterodactyl/yolks/tree/master/python/3.10)
+    * `ghcr.io/pterodactyl/yolks:python_3.10`
 
 ### Installation Images
 
