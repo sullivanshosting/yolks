@@ -9,7 +9,7 @@ node -v
 
 # Replace Startup Variables
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
-echo "\033[1m\033[33mserver@sullivanshosting~ ${MODIFIED_STARTUP}"
+printf "\033[1m\033[33mserver@sullivanshosting~ \033[0m%s\n" "$MODIFIED_STARTUP"
 
 # Run the Server
 eval ${MODIFIED_STARTUP}
