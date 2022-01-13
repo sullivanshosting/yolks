@@ -15,4 +15,4 @@ MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval e
 printf "\033[1m\033[33mserver@sullivanshosting~ \033[0m%s\n" "$MODIFIED_STARTUP"
 
 # Run the Server
-eval ${MODIFIED_STARTUP}
+exec env ${MODIFIED_STARTUP}
