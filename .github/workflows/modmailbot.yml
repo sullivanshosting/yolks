@@ -10,7 +10,7 @@ on:
       - modmailbot/*
 jobs:
   push:
-    name: "yolks:nodejs_${{ matrix.tag }}"
+    name: "yolks:ModMailBot_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

@@ -18,8 +18,8 @@ for index in ${!PLUGINS[*]}
 do
     BAR="$BAR||./mmplugins/${PLUGINS[$index]}/index.js"
 done
-
+MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
 printf "\033[1m\033[33mserver@sullivanshosting~ \033[0m%s\n" "Starting ModMailBot"
 
 # Run the Server
-exec env MM_TOKEN=${MM_TOKEN} MM_MAIN_SERVER_ID=${MM_MAIN_SERVER_ID} MM_INBOX_SERVER_ID=${MM_INBOX_SERVER_ID} MM_LOG_CHANNEL_ID=${MM_LOG_CHANNEL_ID} if [[ "$MM_PLUGINS" ]]; then echo MM_PLUGINS=${BAR:2} done; fi; npm run start
+exec env MM_TOKEN=${MM_TOKEN} MM_MAIN_SERVER_ID=${MM_MAIN_SERVER_ID} MM_INBOX_SERVER_ID=${MM_INBOX_SERVER_ID} MM_LOG_CHANNEL_ID=${MM_LOG_CHANNEL_ID} if [[ "$MM_PLUGINS" ]]; then echo MM_PLUGINS=${BAR:2} done; fi; ${MODIFIED_STARTUP}
