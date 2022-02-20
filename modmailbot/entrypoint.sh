@@ -13,12 +13,12 @@ cd /home/container || exit 1
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mnode -v\n"
 node -v
 
-PLUGINS=( ${PLUGINS} )
+MODMAIL_PLUGINS=( ${PLUGINS} )
 BAR=""
 
-for index in ${!PLUGINS[*]}
+for index in ${!MODMAIL_PLUGINS[*]}
 do
-    BAR="$BAR||./mmplugins/${PLUGINS[$index]}/index.js"
+    BAR="$BAR||./mmplugins/${MODMAIL_PLUGINS[$index]}/index.js"
 done
 
 
