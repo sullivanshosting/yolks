@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'`
 
