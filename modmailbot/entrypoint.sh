@@ -13,7 +13,7 @@ cd /home/container || exit 1
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mnode -v\n"
 node -v
 
-PLUGINS=(${PLUGINS})
+PLUGINS=( ${PLUGINS} )
 BAR=""
 
 for index in ${!PLUGINS[*]}
