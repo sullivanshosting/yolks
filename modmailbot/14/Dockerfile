@@ -1,6 +1,6 @@
 FROM        node:14-buster-slim
 
-LABEL       author="Softwarenoob" maintainer="admin@softwarenoob.com"
+LABEL       author="SullivansHosting" maintainer="administration@sullivanshosting.com"
 
 RUN         apt update \
             && apt -y install ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils build-essential \
