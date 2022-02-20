@@ -12,13 +12,11 @@ cd /home/container || exit 1
 # Print Node.js version
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mnode -v\n"
 node -v
-FOO="${PLUGINS}"
-MODMAIL_PLUGINS=( ${FOO} )
 BAR=""
 
-for index in ${!MODMAIL_PLUGINS[*]}
+for index in ${!PLUGINS[*]}
 do
-    BAR="$BAR||./mmplugins/${MODMAIL_PLUGINS[$index]}/index.js"
+    BAR="$BAR||./mmplugins/${PLUGINS[$index]}/index.js"
 done
 
 
