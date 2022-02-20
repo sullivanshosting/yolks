@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# Make internal Docker IP address available to processes.
 export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'`
 
 cd /home/container || exit 1
 
-# Print Node.js version
 printf "\033[1m\033[33mserver@SullivansHosting~ \033[0mnode -v\n"
 node -v
 
