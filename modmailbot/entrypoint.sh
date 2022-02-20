@@ -11,7 +11,7 @@ printf "\033[1m\033[33mserver@SullivansHosting~ \033[0mnode -v\n"
 node -v
 
 # Replace Startup Variables
-PLUGINS=( ${MM_PLUGINS} )
+PLUGINS=("${MM_PLUGINS}")
 BAR=""
 
 for index in ${!PLUGINS[*]}
