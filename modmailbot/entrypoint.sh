@@ -26,9 +26,8 @@ done
 # variable format of "${VARIABLE}" before evaluating the string and automatically
 # replacing the values.
 PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
-config="MM_TOKEN=${TOKEN} MM_MAIN_SERVER_ID=${MAIN_SERVER_ID} MM_INBOX_SERVER_ID=${INBOX_SERVER_ID} MM_LOG_CHANNEL_ID=${LOG_CHANNEL_ID}"
 # Display the command we're running in the output, and then execute it with the env
 # from the container itself.
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0m%s\n" "$PARSED"
 # shellcheck disable=SC2086
-exec env ${config} ${PARSED}
+exec env ${PARSED}
