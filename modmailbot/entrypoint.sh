@@ -13,11 +13,20 @@ cd /home/container || exit 1
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mnode -v\n"
 node -v
 
+PLUGINS=(${MM_PLUGINS})
+BAR=""
+
+for index in ${!PLUGINS[*]}
+do
+    BAR="$BAR||./mmplugins/${PLUGINS[$index]}/index.js"
+done
+
+
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
 # variable format of "${VARIABLE}" before evaluating the string and automatically
 # replacing the values.
 PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
-
+config="MM_TOKEN=${TOKEN} MM_MAIN_SERVER_ID=${MAIN_SERVER_ID} MM_INBOX_SERVER_ID=${INBOX_SERVER_ID} MM_LOG_CHANNEL_ID=${LOG_CHANNEL_ID}"
 # Display the command we're running in the output, and then execute it with the env
 # from the container itself.
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0m%s\n" "$PARSED"
