@@ -18,7 +18,8 @@ node -v
 #do
 #    BAR="$BAR||./mmplugins/${PLUGINS[$index]}/index.js"
 #done
-printf "${MM_PLUGINS}"
+
+\033[1m\033[33mserver@sullivanshosting~ \033[0m%s\n" "${MM_PLUGINS}"
 MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
 printf "\033[1m\033[33mserver@sullivanshosting~ \033[0m%s\n" "Starting ModMailBot"
 #config="MM_TOKEN=${MM_TOKEN} MM_MAIN_SERVER_ID=${MM_MAIN_SERVER_ID} MM_INBOX_SERVER_ID=${MM_INBOX_SERVER_ID} MM_LOG_CHANNEL_ID=${MM_LOG_CHANNEL_ID}"
