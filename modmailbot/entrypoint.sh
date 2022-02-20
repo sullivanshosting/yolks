@@ -1,3 +1,4 @@
+#!/bin/ash
 TZ=${TZ:-UTC}
 export TZ
 
