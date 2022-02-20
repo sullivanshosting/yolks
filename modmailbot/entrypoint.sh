@@ -12,12 +12,8 @@ cd /home/container || exit 1
 # Print Node.js version
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mnode -v\n"
 node -v
-BAR=""
-
-for index in ${!PLUGINS[*]}
-do
-    BAR="$BAR||./mmplugins/${PLUGINS[$index]}/index.js"
-done
+delim="||"
+printf "./mmplugins/%s/index.js\n$delim\n" "${PLUGINS[@]}" | head -n-1 | paste -sd ''
 
 
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
