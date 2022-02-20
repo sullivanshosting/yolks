@@ -11,7 +11,7 @@ BAR=""
 
 for index in ${!PLUGINS[*]}
 do
-    BAR="$BAR||./mmplugins/${PLUGINS[$index]}/index.js"
+    BAR="$BAR||/mmplugins/${PLUGINS[$index]}/index.js"
 done
 
 # Replace Startup Variables
