@@ -12,8 +12,8 @@ cd /home/container || exit 1
 # Print Node.js version
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mnode -v\n"
 node -v
-
-MODMAIL_PLUGINS=( ${PLUGINS} )
+FOO="${PLUGINS}"
+MODMAIL_PLUGINS=( ${FOO} )
 BAR=""
 
 for index in ${!MODMAIL_PLUGINS[*]}
